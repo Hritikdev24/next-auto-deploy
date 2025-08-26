@@ -3,7 +3,7 @@ import React from "react";
 type LayoutProps = {
   children: React.ReactNode;
   students: React.ReactNode;
-  teacher: React.ReactNode;
+  teachers: React.ReactNode;
 };
 
 export default function Layout({ children, students, teacher }: LayoutProps) {
