@@ -9,10 +9,8 @@ type Product = {
 };
 
 export default async function About() {
-  // Fetch products from DummyJSON (SSR)
-  const res = await fetch("https://dummyjson.com/products?limit=5", {
-    cache: "no-store", // ensures SSR fetch each request
-  });
+  // Fetch products from DummyJSON on each request (SSR)
+  const res = await fetch("https://dummyjson.com/products?limit=5");
   const data = await res.json();
   const products: Product[] = data.products;
 
@@ -29,7 +27,7 @@ export default async function About() {
       <section style={{ textAlign: "center", marginBottom: "30px" }}>
         <h2 style={{ fontSize: "28px", marginBottom: "10px" }}>About Page</h2>
         <p style={{ fontSize: "16px", color: "#666" }}>
-          Here are some products from <strong>DummyJSON</strong>:
+         :
         </p>
       </section>
 
@@ -37,8 +35,9 @@ export default async function About() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-          gap: "25px",
+          gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+          gap: "20px",
+          width: "100%",
           maxWidth: "1200px",
           margin: "0 auto",
         }}
@@ -53,7 +52,9 @@ export default async function About() {
               textAlign: "center",
               boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
               transition: "transform 0.2s ease, box-shadow 0.2s ease",
-            }}>
+              cursor: "pointer",
+            }}
+          >
             <Image
               src={item.thumbnail}
               alt={item.title}
@@ -61,6 +62,8 @@ export default async function About() {
               height={180}
               style={{
                 objectFit: "contain",
+                width: "100%",
+                height: "auto",
                 borderRadius: "10px",
                 marginBottom: "15px",
               }}
