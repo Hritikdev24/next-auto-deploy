@@ -60,6 +60,9 @@ export default function RootLayout({
             <Link href="/about" style={{ color: "#fff", textDecoration: "none" }}>
               About
             </Link>
+            <Link href="/education" style={{ color: "#fff", textDecoration: "none" }}>
+              Education
+            </Link>
           </nav>
         </header>
 
