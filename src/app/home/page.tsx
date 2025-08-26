@@ -1,5 +1,18 @@
 import Image from "next/image";
 
+
+export interface Product {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string;
+    rating: {
+      rate: number;
+      count: number;
+    };
+  }
 export default async function Home() {
   // Fetch products on the server (SSR)
   const res = await fetch("https://fakestoreapi.com/products");
@@ -46,7 +59,7 @@ export default async function Home() {
           gap: "20px",
         }}
       >
-        {products.map((item: any) => (
+        {products.map((item:Product) => (
           <div
             key={item.id}
             style={{
