@@ -33,53 +33,110 @@ export default function RootLayout({
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "#f4f4f9",
+          backgroundColor: "#f9fafc", // light neutral background
           fontFamily: "var(--font-geist-sans), sans-serif",
+          color: "#1a1a1a",
         }}
       >
         {/* Header */}
         <header
           style={{
-            backgroundColor: "#0070f3",
-            padding: "15px 30px",
+            backgroundColor: "#0f172a", // deep navy blue
+            padding: "15px 40px",
             color: "#fff",
             fontSize: "1.5rem",
             fontWeight: "bold",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
           }}
         >
-          <div> <Link href="/" style={{ color: "#fff", textDecoration: "none" }}>
+          <div>
+            <Link
+              href="/"
+              style={{
+                color: "#f97316", // orange accent
+                textDecoration: "none",
+                fontSize: "1.8rem",
+                fontWeight: "bold",
+              }}
+            >
               Hritik
-            </Link></div>
-          <nav style={{ display: "flex", gap: "20px" }}>
-            <Link href="/home" style={{ color: "#fff", textDecoration: "none" }}>
+            </Link>
+          </div>
+          <nav style={{ display: "flex", gap: "25px" }}>
+            <Link
+              href="/home"
+              style={{
+                color: "#e2e8f0",
+                textDecoration: "none",
+                fontSize: "1rem",
+                transition: "color 0.3s",
+              }}
+            >
               Home
             </Link>
-            <Link href="/about" style={{ color: "#fff", textDecoration: "none" }}>
+            <Link
+              href="/about"
+              style={{
+                color: "#e2e8f0",
+                textDecoration: "none",
+                fontSize: "1rem",
+                transition: "color 0.3s",
+              }}
+            >
               About
             </Link>
-            <Link href="/education" style={{ color: "#fff", textDecoration: "none" }}>
+            <Link
+              href="/education"
+              style={{
+                color: "#e2e8f0",
+                textDecoration: "none",
+                fontSize: "1rem",
+                transition: "color 0.3s",
+              }}
+            >
               Education
+            </Link>
+            <Link
+              href="/pooja-hegade"
+              style={{
+                color: "#e2e8f0",
+                textDecoration: "none",
+                fontSize: "1rem",
+                transition: "color 0.3s",
+              }}
+            >
+              Pooja Hegade
             </Link>
           </nav>
         </header>
 
         {/* Main content */}
-        <main style={{ flex: 1, padding: "40px" }}>{children}</main>
+        <main
+          style={{
+            flex: 1,
+            padding: "50px",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
+          {children}
+        </main>
 
         {/* Footer */}
         <footer
           style={{
-            backgroundColor: "#222",
-            color: "#fff",
+            backgroundColor: "#0f172a", // same as header for consistency
+            color: "#94a3b8", // soft gray
             textAlign: "center",
-            padding: "15px",
-            fontSize: "0.9rem",
+            padding: "20px",
+            fontSize: "0.95rem",
+            borderTop: "1px solid #1e293b",
           }}
         >
-          © {new Date().getFullYear()} Hritik. All rights reserved.
+          © {new Date().getFullYear()} <span style={{ color: "#f97316" }}>Hritik</span>. All rights reserved.
         </footer>
       </body>
     </html>
