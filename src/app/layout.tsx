@@ -50,9 +50,9 @@ export default function RootLayout({
             alignItems: "center",
           }}
         >
-          <div>Hritik</div>
+          <div><Link href={"/"}>Hritik</Link></div>
           <nav style={{ display: "flex", gap: "20px" }}>
-            <Link href="/" style={{ color: "#fff", textDecoration: "none" }}>
+            <Link href="/home" style={{ color: "#fff", textDecoration: "none" }}>
               Home
             </Link>
             <Link href="/about" style={{ color: "#fff", textDecoration: "none" }}>
