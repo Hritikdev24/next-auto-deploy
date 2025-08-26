@@ -6,7 +6,7 @@ type LayoutProps = {
   teachers: React.ReactNode;
 };
 
-export default function Layout({ children, students, teacher }: LayoutProps) {
+export default function Layout({ children, students, teachers }: LayoutProps) {
   return (
     <div
       style={{
@@ -144,7 +144,7 @@ export default function Layout({ children, students, teacher }: LayoutProps) {
               }}
             >
               <h3 style={{ marginBottom: "10px" }}>Teachers</h3>
-              {teacher}
+              {teachers}
               <ul style={{ lineHeight: "1.6", fontSize: "14px" }}>
                 <li>Mrs. Johnson - Mathematics</li>
                 <li>Mr. Williams - Science</li>
