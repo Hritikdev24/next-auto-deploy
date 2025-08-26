@@ -2,9 +2,7 @@ import Image from "next/image";
 
 export default async function Home() {
   // Fetch products on the server (SSR)
-  const res = await fetch("https://fakestoreapi.com/products", {
-    cache: "no-store",
-  });
+  const res = await fetch("https://fakestoreapi.com/products");
   const products = await res.json();
 
   return (
