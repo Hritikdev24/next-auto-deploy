@@ -35,7 +35,8 @@ export default async function Other() {
         style={{
           display: "grid",
           gap: "25px",
-          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", // bigger min size
+          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", // responsive
+          justifyItems: "center",
         }}
       >
         {images.map((item, index) => (
@@ -48,26 +49,21 @@ export default async function Other() {
               boxShadow: "0 6px 16px rgba(0,0,0,0.1)",
               transition: "transform 0.3s ease",
               cursor: "pointer",
+              width: "100%", // responsive full width of column
+              maxWidth: "500px", // prevent extra stretch
             }}
           >
-            <div
+            <Image
+              src={`https://nest-rest-service-k0ad.onrender.com/images/${item}`}
+              alt={`Image ${index + 1}`}
+              width={800} // keeps good resolution
+              height={600} // ratio maintained
               style={{
-                position: "relative",
                 width: "100%",
-                height: "350px", // Larger images
-                backgroundColor: "#f3f4f6",
+                height: "auto", // maintain aspect ratio, no crop
+                borderRadius: "16px",
               }}
-            >
-              <Image
-                src={`https://nest-rest-service-k0ad.onrender.com/images/${item}`}
-                alt={`Image ${index + 1}`}
-                fill
-                style={{
-                  objectFit: "cover", // fill without gaps
-                  borderRadius: "16px",
-                }}
-              />
-            </div>
+            />
           </div>
         ))}
       </div>
