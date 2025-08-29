@@ -62,7 +62,7 @@ export default function RootLayout({
                 fontWeight: "bold",
               }}
             >
-              Hritik
+               Work
             </Link>
           </div>
           <nav style={{ display: "flex", gap: "25px" }}>
@@ -98,6 +98,17 @@ export default function RootLayout({
               }}
             >
               Education
+            </Link>
+               <Link
+              href="/other"
+              style={{
+                color: "#e2e8f0",
+                textDecoration: "none",
+                fontSize: "1rem",
+                transition: "color 0.3s",
+              }}
+            >
+              Other
             </Link>
             <Link
               href="/pooja-hegade"
