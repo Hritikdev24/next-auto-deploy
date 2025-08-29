@@ -4,17 +4,16 @@ export default async function Other() {
   // Fetch images from NestJS API
   const response = await fetch(
     "https://nest-rest-service-k0ad.onrender.com/api/auth/images"
-  
   );
   const data = await response.json();
   const images: string[] = data.data;
-  console.log("image",images)
+
   return (
     <div
       style={{
         minHeight: "100vh",
         backgroundColor: "#f9fafb",
-        padding: "50px 20px",
+        padding: "40px 20px",
         fontFamily: "Arial, sans-serif",
       }}
     >
@@ -22,10 +21,10 @@ export default async function Other() {
       <h1
         style={{
           textAlign: "center",
-          fontSize: "36px",
+          fontSize: "40px",
           fontWeight: "bold",
           color: "#ff69b4",
-          marginBottom: "40px",
+          marginBottom: "50px",
         }}
       >
         Other Gallery
@@ -35,8 +34,8 @@ export default async function Other() {
       <div
         style={{
           display: "grid",
-          gap: "20px",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "25px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", // bigger min size
         }}
       >
         {images.map((item, index) => (
@@ -46,17 +45,16 @@ export default async function Other() {
               backgroundColor: "#fff",
               borderRadius: "16px",
               overflow: "hidden",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-              transition: "all 0.3s ease",
+              boxShadow: "0 6px 16px rgba(0,0,0,0.1)",
+              transition: "transform 0.3s ease",
               cursor: "pointer",
             }}
-           
           >
             <div
               style={{
                 position: "relative",
                 width: "100%",
-                height: "250px",
+                height: "350px", // Larger images
                 backgroundColor: "#f3f4f6",
               }}
             >
@@ -65,21 +63,10 @@ export default async function Other() {
                 alt={`Image ${index + 1}`}
                 fill
                 style={{
-                  objectFit: "contain",
-                  backgroundColor: "#f3f4f6",
+                  objectFit: "cover", // fill without gaps
+                  borderRadius: "16px",
                 }}
               />
-            </div>
-            <div style={{ padding: "12px", textAlign: "center" }}>
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  color: "#374151",
-                }}
-              >
-                {item}
-              </p>
             </div>
           </div>
         ))}
@@ -87,4 +74,3 @@ export default async function Other() {
     </div>
   );
 }
-
