@@ -58,8 +58,8 @@ export default function RootLayout({
               style={{
                 color: "#f97316", // orange accent
                 textDecoration: "none",
-                fontSize: "1.8rem",
-                fontWeight: "bold",
+                fontSize: "1rem",
+                transition: "color 0.3s",
               }}
             >
                Work
