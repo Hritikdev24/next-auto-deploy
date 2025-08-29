@@ -50,16 +50,7 @@ export default async function Other() {
               transition: "all 0.3s ease",
               cursor: "pointer",
             }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.transform = "scale(1.05)";
-              (e.currentTarget as HTMLElement).style.boxShadow =
-                "0 8px 20px rgba(0,0,0,0.2)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.transform = "scale(1)";
-              (e.currentTarget as HTMLElement).style.boxShadow =
-                "0 4px 12px rgba(0,0,0,0.1)";
-            }}
+           
           >
             <div
               style={{
