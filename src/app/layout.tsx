@@ -147,7 +147,7 @@ export default function RootLayout({
             borderTop: "1px solid #1e293b",
           }}
         >
-          © {new Date().getFullYear()} <span style={{ color: "#f97316" }}>Hritik</span>. All rights reserved.
+          © {new Date().getFullYear()} <span style={{ color: "#f97316" }}>Work</span>. All rights reserved.
         </footer>
       </body>
     </html>

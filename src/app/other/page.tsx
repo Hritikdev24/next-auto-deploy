@@ -8,7 +8,7 @@ export default async function Other() {
   );
   const data = await response.json();
   const images: string[] = data.data;
-
+  console.log("image",images)
   return (
     <div
       style={{
@@ -97,4 +97,3 @@ export default async function Other() {
   );
 }
 
-}
