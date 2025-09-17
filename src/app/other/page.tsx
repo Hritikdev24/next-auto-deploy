@@ -3,7 +3,7 @@ import Image from "next/image";
 export default async function Other() {
   // Fetch images from NestJS API
   const response = await fetch(
-    "https://nest-rest-service-k0ad.onrender.com/api/auth/images"
+    "https://nest-rest-service-k0ad.onrender.com/images/images"
   );
   const data = await response.json();
   const images: string[] = data.data;
