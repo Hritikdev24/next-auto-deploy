@@ -3,7 +3,7 @@ import Image from "next/image";
 export default async function Other() {
   // Fetch images from NestJS API
   const response = await fetch(
-    "https://nest-rest-service-k0ad.onrender.com/images/images"
+    "https://nest-rest-service-k0ad.onrender.com/api/auth/images"
   );
   const data = await response.json();
   const images: string[] = data.data;
@@ -54,7 +54,7 @@ export default async function Other() {
             }}
           >
             <Image
-              src={`https://nest-rest-service-k0ad.onrender.com/images/${item}`}
+              src={`https://nest-rest-service-k0ad.onrender.com/images/images/${item}`}
               alt={`Image ${index + 1}`}
               width={800} // keeps good resolution
               height={600} // ratio maintained
