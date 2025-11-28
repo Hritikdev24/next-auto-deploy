@@ -1,26 +1,37 @@
 import Image from "next/image";
 import { images } from "@/assets/assets";
-export default function Pooja() {
+
+// Metadata for the page
+export const metadata = {
+  title: "Pooja Hegade Gallery",
+  description: "Explore the beautiful Pooja Hegade photo and video gallery.",
+  openGraph: {
+    title: "Pooja Hegade Gallery",
+    description: "Explore the beautiful Pooja Hegade photo and video gallery.",
+    url: "https://next-auto-deploy.onrender.com/pooja-hegade",
+    type: "website",
+    images: [
+      {
+       url: `https://next-auto-deploy.onrender.com/images/${images[0].src}`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pooja Hegade Gallery",
+    description: "Explore the beautiful Pooja Hegade photo and video gallery.",
+    images: [`https://next-auto-deploy.onrender.com/images/${images[0].src`],
+  },
+};
+
+export default function PoojaGallery() {
   return (
-    <div
-      style={{
-        padding: "20px",
-        backgroundColor: "#f9f9f9",
-        minHeight: "100vh",
-      }}
-    >
+    <div style={{ padding: "20px", backgroundColor: "#f9f9f9", minHeight: "100vh" }}>
       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Pooja Gallery</h2>
 
-     
-
-      {/* Responsive Image Grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "20px",
-        }}
-      >
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px" }}>
         {images.map((item, index) => (
           <div
             key={index}
@@ -32,25 +43,12 @@ export default function Pooja() {
               transition: "transform 0.2s ease, box-shadow 0.2s ease",
             }}
           >
-            <Image
-              src={item.src}
-              alt={"pooja photos"}
-              width={800}
-              height={1000}
-              style={{ objectFit: "cover", width: "100%", height: "100%" }}
-            />
+            <Image src={item.src} alt="pooja photos" width={800} height={1000} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
           </div>
         ))}
       </div>
 
-       {/* Responsive Video */}
-       <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginTop: "40px",
-        }}
-      >
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "40px" }}>
         <div
           style={{
             width: "100%",
@@ -61,17 +59,7 @@ export default function Pooja() {
             backgroundColor: "#000",
           }}
         >
-          <video
-            src="videos/pooja.mp4"
-            controls
-            poster="horizontal.jpg"
-            style={{
-              width: "100%",
-              height: "auto",
-              display: "block",
-            }}
-            
-          />
+          <video src="/videos/pooja.mp4" controls poster="/images/horizontal.jpg" style={{ width: "100%", height: "auto", display: "block" }} />
         </div>
       </div>
     </div>
