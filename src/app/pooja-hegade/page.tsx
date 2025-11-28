@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: `https://next-auto-deploy.onrender.com/images/${images[0].src}`,
+        url: `${images[0].src}`,
         width: 1200,
         height: 630,
       },
@@ -22,7 +22,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pooja Hegade Gallery",
     description: "Explore the beautiful Pooja Hegade photo and video gallery.",
-    images: [`https://next-auto-deploy.onrender.com/images/${images[0].src}`], // FIXED syntax
+    images: [`${images[0].src}`], // FIXED syntax
   },
 };
 
