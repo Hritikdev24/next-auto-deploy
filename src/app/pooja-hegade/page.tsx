@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: `${images[0].src}`,
+        url:"https://stg.mynicksbuilding.com/gallery/sku_images/original/CL-22-44.jpg",
         width: 1200,
         height: 630,
       },
@@ -22,7 +22,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pooja Hegade Gallery",
     description: "Explore the beautiful Pooja Hegade photo and video gallery.",
-    images: [`${images[0].src}`], // FIXED syntax
+    images: ["https://stg.mynicksbuilding.com/gallery/sku_images/original/CL-22-44.jpg"], // FIXED syntax
   },
 };
 
