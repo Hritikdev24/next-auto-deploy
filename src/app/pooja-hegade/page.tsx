@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url:`${images[3].src}`,
+        url:images[3].src,
         width: 1200,
         height: 630,
       },
@@ -22,7 +22,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pooja Hegade Gallery",
     description: "Explore the beautiful Pooja Hegade photo and video gallery.",
-    images: [`${images[3].src}`] // FIXED syntax
+    images: [images[3].src] // FIXED syntax
   },
 };
 
