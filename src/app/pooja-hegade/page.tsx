@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url:images[3].src,
+        url: images[3].src, // ✔ Correct: direct .src
         width: 1200,
         height: 630,
       },
@@ -22,14 +22,22 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pooja Hegade Gallery",
     description: "Explore the beautiful Pooja Hegade photo and video gallery.",
-    images: [images[3].src] // FIXED syntax
+    images: [images[3].src], // ✔ Correct
   },
 };
 
 export default function PoojaGallery() {
   return (
-    <div style={{ padding: "20px", backgroundColor: "#f9f9f9", minHeight: "100vh" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Pooja Gallery</h2>
+    <div
+      style={{
+        padding: "20px",
+        backgroundColor: "#f9f9f9",
+        minHeight: "100vh",
+      }}
+    >
+      <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
+        Pooja Gallery
+      </h2>
 
       {/* Image Grid */}
       <div
@@ -51,7 +59,7 @@ export default function PoojaGallery() {
             }}
           >
             <Image
-              src={item.src}
+              src={item.src} // item = Next.js image import
               alt="pooja photos"
               width={800}
               height={1000}
@@ -62,7 +70,13 @@ export default function PoojaGallery() {
       </div>
 
       {/* Video */}
-      <div style={{ display: "flex", justifyContent: "center", marginTop: "40px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "40px",
+        }}
+      >
         <div
           style={{
             width: "100%",
@@ -77,7 +91,11 @@ export default function PoojaGallery() {
             src="/videos/pooja.mp4"
             controls
             poster="/images/horizontal.jpg"
-            style={{ width: "100%", height: "auto", display: "block" }}
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+            }}
           />
         </div>
       </div>
