@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-       url: `https://next-auto-deploy.onrender.com/images/${images[0].src}`,
+        url: `https://next-auto-deploy.onrender.com/images/${images[0].src}`,
         width: 1200,
         height: 630,
       },
@@ -22,7 +22,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pooja Hegade Gallery",
     description: "Explore the beautiful Pooja Hegade photo and video gallery.",
-    images: [`https://next-auto-deploy.onrender.com/images/${images[0].src`],
+    images: [`https://next-auto-deploy.onrender.com/images/${images[0].src}`], // FIXED syntax
   },
 };
 
@@ -31,7 +31,14 @@ export default function PoojaGallery() {
     <div style={{ padding: "20px", backgroundColor: "#f9f9f9", minHeight: "100vh" }}>
       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Pooja Gallery</h2>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px" }}>
+      {/* Image Grid */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          gap: "20px",
+        }}
+      >
         {images.map((item, index) => (
           <div
             key={index}
@@ -43,11 +50,18 @@ export default function PoojaGallery() {
               transition: "transform 0.2s ease, box-shadow 0.2s ease",
             }}
           >
-            <Image src={item.src} alt="pooja photos" width={800} height={1000} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+            <Image
+              src={item.src}
+              alt="pooja photos"
+              width={800}
+              height={1000}
+              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            />
           </div>
         ))}
       </div>
 
+      {/* Video */}
       <div style={{ display: "flex", justifyContent: "center", marginTop: "40px" }}>
         <div
           style={{
@@ -59,7 +73,12 @@ export default function PoojaGallery() {
             backgroundColor: "#000",
           }}
         >
-          <video src="/videos/pooja.mp4" controls poster="/images/horizontal.jpg" style={{ width: "100%", height: "auto", display: "block" }} />
+          <video
+            src="/videos/pooja.mp4"
+            controls
+            poster="/images/horizontal.jpg"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
         </div>
       </div>
     </div>
