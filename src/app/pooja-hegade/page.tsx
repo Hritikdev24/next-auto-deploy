@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/pooja.jpg", // ✔ Correct: direct .src
+        url: "https://akankshagajria.in/wp-content/uploads/2021/06/Pooja-Hegde-3.jpg", // ✔ Correct: direct .src
         width: 1200,
         height: 630,
       },
@@ -22,7 +22,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pooja Hegade Gallery",
     description: "Explore the beautiful Pooja Hegade photo and video gallery.",
-    images: ["/pooja.jpg"], // ✔ Correct
+    images: ["https://akankshagajria.in/wp-content/uploads/2021/06/Pooja-Hegde-3.jpg"], // ✔ Correct
   },
 };
 
